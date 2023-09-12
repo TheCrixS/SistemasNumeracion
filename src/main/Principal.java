@@ -1,10 +1,7 @@
 package main;
-
 import operaciones.Conversion;
 import operaciones.Suma;
-
 import java.util.Scanner;
-
 public class Principal {
     public static void main1(String[] args) {
         Suma sum = new Suma();
@@ -25,7 +22,6 @@ public class Principal {
             System.out.println("Base: "+base+"\nNumero 1: "+oper1+"\nNumero 2: "+oper2+"\nResultado: "+s);
         }
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Conversion conversion = new Conversion();
@@ -33,6 +29,7 @@ public class Principal {
         int base = sc.nextInt();
         System.out.println("Ingrese el operador 1: ");
         int oper1 = sc.nextInt();
-        System.out.println(conversion.conversion(oper1,base));
+        String c = Integer.toString(oper1);
+        System.out.println(conversion.inversa(c,base));
     }
 }
