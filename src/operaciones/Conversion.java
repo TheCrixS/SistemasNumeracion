@@ -1,34 +1,26 @@
 package operaciones;
 
 public class Conversion {
-    public String decimalesBinarios(int decimal){
+    int base;
+    public int getBase() {
+        return base;
+    }
+    public void setBase(int base) {
+        this.base = base;
+    }
+    public String conversion(int decimal, int base){
         if (decimal == 0){
             return "0";
         }else {
-            StringBuilder binario = new StringBuilder();
+            StringBuilder conver = new StringBuilder();
             int cont = decimal;
             while (cont > 0){
-                int residuo = cont % 2;
-                binario.insert(0,residuo);
-                cont /= 2;
-                System.out.println(decimal+" / 2 = "+cont+", Residuo = "+residuo);
+                int residuo = cont % base;
+                conver.insert(0,residuo);
+                cont /= base;
+                System.out.println(decimal+" / "+"base = "+cont+", Residuo = "+residuo);
             }
+            return conver.toString();
         }
-        return "";
-    }
-    public String binariosDecimales(int binario){
-        return "";
-    }
-    public String decimalOctal (int decimal){
-        return "";
-    }
-    public String octalDecimal(int octal){
-        return "";
-    }
-    public String decimalHexadecimal (int decimal){
-        return "";
-    }
-    public String hexadecimalDecimal(int hdecimal){
-        return "";
     }
 }
