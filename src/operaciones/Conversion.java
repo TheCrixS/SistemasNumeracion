@@ -1,12 +1,5 @@
 package operaciones;
 public class Conversion {
-    int base;
-    public int getBase() {
-        return base;
-    }
-    public void setBase(int base) {
-        this.base = base;
-    }
     public String conversion(int decimal, int base) {
         if (base == 2 || base == 8 || base == 10 || base == 16) {
             if (decimal == 0) {
@@ -40,7 +33,6 @@ public class Conversion {
             } else {
                 throw new IllegalArgumentException("Número no válido");
             }
-
             if (valorDigito >= base) {
                 throw new IllegalArgumentException("Número no válido para la base proporcionada");
             }
