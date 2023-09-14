@@ -4,6 +4,18 @@ public class Conversion {
         if (base == 2 || base == 8 || base == 10 || base == 16) {
             if (decimal == 0) {
                 return "0";
+            }
+            if (base == 16){
+                StringBuilder conver = new StringBuilder();
+                char[] baseHexadecimal = "0123456789ABCDEF".toCharArray();
+                int cont = decimal;
+                while (cont > 0) {
+                    int residuo = cont % base;
+                    conver.insert(0, baseHexadecimal[residuo]);
+                    cont /= base;
+                    System.out.println(decimal + " / " + base + " = " + cont + ", Residuo = " + residuo);
+                }
+                    return conver.toString();
             } else {
                 StringBuilder conver = new StringBuilder();
                 int cont = decimal;
