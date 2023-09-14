@@ -15,10 +15,10 @@ public class Principal {
             opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
-                    sumas();
+                    sumas(scanner);
                     break;
                 case 2:
-                    conversiones();
+                    conversiones(scanner);
                     break;
                 case 3:
                     System.out.println("Saliendo del programa. ¡Hasta luego!");
@@ -30,8 +30,7 @@ public class Principal {
         } while (opcion != 3);
         scanner.close();
     }
-    public static void sumas() {
-        Scanner scanner = new Scanner(System.in);
+    public static void sumas(Scanner scanner) {
         int subOpcion;
         Suma suma = new Suma();
         do {
@@ -61,7 +60,7 @@ public class Principal {
                     break;
                 case 3:
                     System.out.println("Volviendo al Menú Principal.");
-                    break;
+                    return;
                 default:
                     System.out.println("Subopción no válida. Por favor, seleccione una subopción válida.");
                     break;
@@ -69,8 +68,7 @@ public class Principal {
         } while (subOpcion != 3);
         scanner.close();
     }
-    public static void conversiones() {
-        Scanner scanner = new Scanner(System.in);
+    public static void conversiones(Scanner scanner) {
         int subOpcion;
         Conversion conversion = new Conversion();
         do {
@@ -111,7 +109,7 @@ public class Principal {
                     break;
                 case 3:
                     System.out.println("Volviendo al Menú Principal.");
-                    break;
+                    return;
                 default:
                     System.out.println("Subopción no válida. Por favor, seleccione una subopción válida.");
                     break;
