@@ -1,6 +1,7 @@
 package operaciones;
 
 public class Suma {
+    Conversion conver = new Conversion();
     public String sumaBinarios(String operador1, String operador2){
         int i = operador1.length() - 1;
         int j = operador2.length() - 1;
@@ -27,5 +28,17 @@ public class Suma {
     public int sumaDecimales(int operador1, int operador2){
         int suma = operador1 + operador2;
         return suma;
+    }
+    public String sumaTodos(String operador1, String operador2, int base) {
+        int suma = 0;
+        if (base != 10) {
+            int op1 = conver.inversa(operador1, base);
+            int op2 = conver.inversa(operador2, base);
+            suma = op1 + op2;
+        } else {
+            System.out.println("¡Base no compatible!");
+        }
+        String resultado = conver.conversion(suma,base);
+        return resultado;
     }
 }
