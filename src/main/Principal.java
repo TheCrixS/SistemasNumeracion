@@ -37,7 +37,7 @@ public class Principal {
                     System.out.println("Opción no válida. Por favor, seleccione una opción válida.");
                     break;
             }
-        } while (opcion != 3);
+        } while (opcion != 5);
         scanner.close();
     }
     public static void sumas(Scanner scanner) {
@@ -93,7 +93,7 @@ public class Principal {
                     System.out.println("Subopción no válida. Por favor, seleccione una subopción válida.");
                     break;
             }
-        } while (subOpcion != 3);
+        } while (subOpcion != 5);
         scanner.close();
     }
     public static void conversiones(Scanner scanner) {
@@ -199,7 +199,7 @@ public class Principal {
                     System.out.println("Subopción no válida. Por favor, seleccione una subopción válida.");
                     break;
             }
-        } while (subOpcion != 3);
+        } while (subOpcion != 5);
         scanner.close();
     }
     public static void multiplicaciones(Scanner scanner) {
@@ -255,7 +255,7 @@ public class Principal {
                     System.out.println("Subopción no válida. Por favor, seleccione una subopción válida.");
                     break;
             }
-        } while (subOpcion != 3);
+        } while (subOpcion != 5);
         scanner.close();
     }
 }
