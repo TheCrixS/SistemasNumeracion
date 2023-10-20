@@ -13,7 +13,7 @@ public class Conversion {
                     int residuo = cont % base;
                     conver.insert(0, baseHexadecimal[residuo]);
                     cont /= base;
-                    //System.out.println(decimal + " / " + base + " = " + cont + ", Residuo = " + residuo);
+                    System.out.println(decimal + " / " + base + " = " + cont + ", Residuo = " + residuo);
                 }
                     return conver.toString();
             } else {
@@ -23,7 +23,7 @@ public class Conversion {
                     int residuo = cont % base;
                     conver.insert(0, residuo);
                     cont /= base;
-                    //System.out.println(decimal + " / " + base + " = " + cont + ", Residuo = " + residuo);
+                    System.out.println(decimal + " / " + base + " = " + cont + ", Residuo = " + residuo);
                 }
                 return conver.toString();
             }
@@ -50,7 +50,7 @@ public class Conversion {
             }
             int operacion = (int)Math.pow(base,i)*valorDigito;
             decimal += operacion;
-            //System.out.println(digito + " * " + base + "^" + i + " = " + operacion);
+            System.out.println(digito + " * " + base + "^" + i + " = " + operacion);
         }
         return decimal;
     }

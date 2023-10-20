@@ -41,4 +41,15 @@ public class Suma {
         String resultado = conver.conversion(suma,base);
         return resultado;
     }
+    public String sumaDistintos(String operador1, String operador2, int base1, int base2) {
+        int suma = 0;
+        System.out.println("Conversion del primer numero");
+        int op1 = conver.inversa(operador1,base1);
+        System.out.println("Conversion del segundo numero");
+        int op2 = conver.inversa(operador2, base2);
+        suma = op1 + op2;
+        System.out.println("Conversion del resultado");
+        String resultado = conver.conversion(suma,10);
+        return resultado;
+    }
 }

@@ -49,7 +49,8 @@ public class Principal {
             System.out.println("2. Binarios");
             System.out.println("3. Octales");
             System.out.println("4. Hexadecimales");
-            System.out.println("5. Volver al Menú Principal");
+            System.out.println("5. Distintos");
+            System.out.println("6. Volver al Menú Principal");
             System.out.print("Seleccione una opción: ");
             subOpcion = scanner.nextInt();
 
@@ -87,13 +88,25 @@ public class Principal {
                     System.out.println("La suma de los numeros hexadecimales ("+hex1+", "+hex2+") es: "+sumHex);
                     break;
                 case 5:
+                    System.out.println("Ingrese el primer numero: ");
+                    String dis1 = scanner.next();
+                    System.out.println("Ingrese la base del primer numero: ");
+                    String base1 = scanner.next();
+                    System.out.println("Ingrese el segundo numero: ");
+                    String dis2 = scanner.next();
+                    System.out.println("Ingrese la base del segundo numero: ");
+                    String base2 = scanner.next();
+                    String disHex = suma.sumaDistintos(dis1,dis2,Integer.parseInt(base1),Integer.parseInt(base2));
+                    System.out.println("La suma de los numeros hexadecimales ("+dis1+", "+dis2+") es: "+disHex);
+                    break;
+                case 6:
                     System.out.println("Volviendo al Menú Principal.");
                     return;
                 default:
                     System.out.println("Subopción no válida. Por favor, seleccione una subopción válida.");
                     break;
             }
-        } while (subOpcion != 5);
+        } while (subOpcion != 6);
         scanner.close();
     }
     public static void conversiones(Scanner scanner) {
